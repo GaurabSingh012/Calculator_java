@@ -89,4 +89,20 @@ public class CalculatorOperations {
         return a * a * a;
     }
 
+    /**
+     * Calculates the square root of a number provided by user input.
+     * @return Square root of the number
+     * @throws CustomException if the number is negative
+     */
+    public double squareRoot() throws CustomException {
+        // Prompt for one number
+        System.out.print("Enter number for square root: ");
+        double a = Double.parseDouble(scanner.nextLine());
+
+        if (a < 0) {
+            throw new CustomException("Square root of a negative number is not real.");
+        }
+        return Math.sqrt(a);
+    }
+
 }

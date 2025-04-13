@@ -76,5 +76,17 @@ public class CalculatorOperations {
 
         return a * a;
     }
+    
+    /**
+     * Calculates the cube of a number provided by user input.
+     * @return Cube of the number
+     */
+    public double cube() {
+        // Prompt for one number
+        System.out.print("Enter number to cube: ");
+        double a = Double.parseDouble(scanner.nextLine());
+
+        return a * a * a;
+    }
 
 }

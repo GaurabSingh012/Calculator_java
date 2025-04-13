@@ -1,108 +1,36 @@
-import java.util.Scanner;
-
 public class CalculatorOperations {
-     Scanner scanner = new Scanner(System.in);
 
-    /**
-     * Adds two numbers provided by user input.
-     * @return Sum of the two numbers
-     */
-    public double add() {
-        // Prompt for two numbers
-        System.out.print("Enter first number for addition: ");
-        double a = Double.parseDouble(scanner.nextLine());
-        System.out.print("Enter second number for addition: ");
-        double b = Double.parseDouble(scanner.nextLine());
-
+    public double add(double a, double b) {
         return a + b;
     }
 
-    
-    /**
-     * Subtracts second number from first, both provided by user input.
-     * @return Difference of the two numbers
-     */
-    public double subtract() {
-        // Prompt for two numbers
-        System.out.print("Enter first number for subtraction: ");
-        double a = Double.parseDouble(scanner.nextLine());
-        System.out.print("Enter second number for subtraction: ");
-        double b = Double.parseDouble(scanner.nextLine());
-
+    public double subtract(double a, double b) {
         return a - b;
     }
 
-    /**
-     * Multiplies two numbers provided by user input.
-     * @return Product of the two numbers
-     */
-    public double multiply() {
-        // Prompt for two numbers
-        System.out.print("Enter first number for multiplication: ");
-        double a = Double.parseDouble(scanner.nextLine());
-        System.out.print("Enter second number for multiplication: ");
-        double b = Double.parseDouble(scanner.nextLine());
-
+    public double multiply(double a, double b) {
         return a * b;
     }
 
-
-    /* 
-     * Divides first number by second, both provided by user input.
-     * @return Quotient of the two numbers
-     * @throws ArithmeticException if the second number is zero
-     */
-    public double divide() throws ArithmeticException {
-        // Prompt for two numbers
-        System.out.print("Enter first number for division: ");
-        double a = Double.parseDouble(scanner.nextLine());
-        System.out.print("Enter second number for division: ");
-        double b = Double.parseDouble(scanner.nextLine());
-
+    public double divide(double a, double b) {
         if (b == 0) {
-            throw new ArithmeticException("Division by zero is not allowed.");
+            throw new ArithmeticException("Cannot divide by zero.");
         }
         return a / b;
     }
 
-    /**
-     * Calculates the square of a number provided by user input.
-     * @return Square of the number
-     */
-    public double square() {
-        // Prompt for one number
-        System.out.print("Enter number to square: ");
-        double a = Double.parseDouble(scanner.nextLine());
-
+    public double square(double a) {
         return a * a;
     }
-    
-    /**
-     * Calculates the cube of a number provided by user input.
-     * @return Cube of the number
-     */
-    public double cube() {
-        // Prompt for one number
-        System.out.print("Enter number to cube: ");
-        double a = Double.parseDouble(scanner.nextLine());
 
+    public double cube(double a) {
         return a * a * a;
     }
 
-    /**
-     * Calculates the square root of a number provided by user input.
-     * @return Square root of the number
-     * @throws CustomException if the number is negative
-     */
-    public double squareRoot() throws CustomException {
-        // Prompt for one number
-        System.out.print("Enter number for square root: ");
-        double a = Double.parseDouble(scanner.nextLine());
-
+    public double squareRoot(double a) {
         if (a < 0) {
-            throw new CustomException("Square root of a negative number is not real.");
+            throw new ArithmeticException("Cannot calculate square root of negative number.");
         }
         return Math.sqrt(a);
     }
-
 }

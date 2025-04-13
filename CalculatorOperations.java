@@ -64,4 +64,17 @@ public class CalculatorOperations {
         }
         return a / b;
     }
+
+    /**
+     * Calculates the square of a number provided by user input.
+     * @return Square of the number
+     */
+    public double square() {
+        // Prompt for one number
+        System.out.print("Enter number to square: ");
+        double a = Double.parseDouble(scanner.nextLine());
+
+        return a * a;
+    }
+
 }

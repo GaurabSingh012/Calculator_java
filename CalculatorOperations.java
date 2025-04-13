@@ -47,4 +47,21 @@ public class CalculatorOperations {
     }
 
 
+    /* 
+     * Divides first number by second, both provided by user input.
+     * @return Quotient of the two numbers
+     * @throws ArithmeticException if the second number is zero
+     */
+    public double divide() throws ArithmeticException {
+        // Prompt for two numbers
+        System.out.print("Enter first number for division: ");
+        double a = Double.parseDouble(scanner.nextLine());
+        System.out.print("Enter second number for division: ");
+        double b = Double.parseDouble(scanner.nextLine());
+
+        if (b == 0) {
+            throw new ArithmeticException("Division by zero is not allowed.");
+        }
+        return a / b;
+    }
 }
